@@ -1,0 +1,54 @@
+<!--pages/begin/begin.wxml-->
+<view class="content">
+
+  <van-dialog id="van-dialog" />
+  <!-- 弹出框 -->
+  <van-notify id="van-notify" />
+
+  <!-- 轮播图 -->
+  <view class="slide-image">
+    <swiper class="home-swiper" indicator-dots="true" autoplay="{{autoplay}}" interval="{{interval}}"
+      duration="{{duration}}">
+      <block wx:for-items="{{lunboData}}">
+        <swiper-item>
+          <image src="{{item.imgurl}}" class="slide-image" />
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+
+  <!-- 分割线 -->
+  <form bindreset="formReset" bindsubmit="formSubmit">
+
+    <view class="containere" style="height: auto;">
+      <van-divider contentPosition="center">欢迎!希望各位妈咪欧气每一天~</van-divider>
+    </view>
+
+    <view class="container">
+
+      <view class="nowdays">
+        目前钻石：<input class="searchStyle" name="af" placeholder="000000" type="number" adjust-position="true" />
+      </view>
+
+      <view class="ab">
+        目标：<input class="searchStyle" name="bf" placeholder="000000" type="number" adjust-position="true" />
+      </view>
+
+      <picker name="rq" mode="date" value="{{date}}" bindchange="bindDateChange">
+        <view class="picker">
+          <view class="btn_containere"> 日期：{{date}} </view>
+        </view> 
+
+      </picker>
+        <view class="cb">
+          本日挖钻：<input class="searchStyle" name="cf" placeholder="000000" type="number" adjust-position="true" />
+          </view>
+
+      <view class="btn_container">
+        <button type="default" size="default" formType="submit">保存</button>
+      </view>
+
+    </view>
+
+  </form>
+</view>

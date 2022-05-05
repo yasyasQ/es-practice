@@ -1,0 +1,44 @@
+{
+  "pages": [
+    "pages/begin/begin",
+    "pages/record/record",
+    "pages/user/user"
+  ],
+  "window": {
+    "backgroundTestStyle": "light",
+    "navigationBarBackgroundColor": "#A660A7",
+    "navigationBarTitleText": "ES存钻工",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar":{
+    "backgroundColor":"#A660A7",
+    "color": "#fff0000",
+    "selectedColor":"#FFFFFF",
+    "selectedTextColor": "#FFFFFF",
+    "list": [
+      {
+        "text":"首页",
+        "pagePath":"pages/begin/begin",
+        "iconPath":"pages/icon/begin.png",
+        "selectedIconPath": "pages/icon/selectBegin.png"
+      },
+      {
+        "text":"目标",
+        "pagePath":"pages/record/record",
+        "iconPath":"pages/icon/record.png",
+        "selectedIconPath": "pages/icon/selectRecord.png"
+      },
+      {
+        "text":"用户",
+        "pagePath":"pages/user/user",
+        "iconPath":"pages/icon/user.png",
+        "selectedIconPath": "pages/icon/selectUser.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json",
+  "usingComponents": {
+    "van-button":"@vant/weapp/button/index"
+  },
+  "lazyCodeLoading": "requiredComponents"
+}
