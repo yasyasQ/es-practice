@@ -1,66 +1,76 @@
 // pages/user/user.js
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-
+    username:'',
+    password:'',
+    success:false,
+    test:''
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-
+// 获取输入用户名
+usernameInput:function(e){
+    this.setData({
+      username: e.detail.value
+    })
   },
+// 获取输入密码
+passwordInput:function(e){
+  this.setData({
+    password: e.detail.value
+  })
+},
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+// 登录
+login: function(){
+  var that = this;
+  var warn= null;
+  // warn表示当用户名为空或格式不正确时给出提示
+  if(that.data.username.length === 0 ){
+    wx.showToast({
+      title: '请输入用户名',
+      icon:'loading',
+      duration:1000
+    })
+  }else if (that.data.password.length === 0 ){
+    wx.showToast({
+      title: '请输入密码',
+      icon:'loading',
+      duration:1000
+    })
+  } else {
+    wx.request({
+      url: 'http://域名ID/login',
+      method:"POST",
+      data:{
+        user:that.data.username,
+        password:that.data.password
+      },
+      header:{
+        'content-type':'application/es-form-urlencode'
+      },
+      success:function(res){
+        if(res.data.state === 1 ){
+          // 判断能否登录
+          warn = "用户名或密码错误";
+          wx.showModal({
+            title: '提示',
+            content:warn
+          })
+          return;
+        }
+        that.setData({
+          success:true,
+          text:res.data.url
+        })
+      }
+    })
   }
+
+},
+// 注册（未完成）
+register: function() {
+  wx.navigateTo({
+    url: '/pages/begin/begin.js',
+  })
+}
+
 })

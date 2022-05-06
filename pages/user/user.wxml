@@ -1,2 +1,38 @@
 <!--pages/user/user.wxml-->
-<text>pages/user/user.wxml</text>
+<form bindsubmit="formSubmit">
+
+  <!-- 用户头像名字展示 -->
+  <view class="user-head">
+   <view class="useicon">
+    <open-data type="userAvatarUrl"></open-data>
+  </view>
+  <view class="useming">
+    <open-data type="userNickName" lang="zh_CN"></open-data>
+  </view>
+  </view>
+ 
+  <!-- 登录部分 -->
+  <view class="main-login">
+
+    <!-- 用户名 -->
+    <view class="inputview">
+      <label class="loginLab">用户名：</label>
+      <input type="text" bindinput='usernameInput' name="username" class="inputText" placeholder="请输入用户名" />
+    </view>
+
+    <!-- 分割线 -->
+    <view class="line"></view>
+
+<!-- 密码 -->
+    <view class="inputview">
+      <label class="loginLab">密码：</label>
+      <input type="text" bindinput='passwordInput' name="password" class="inputText" placeholder="请输入密码" password="true"/>
+    </view>
+
+<!-- 按钮 -->
+<view class="login-btn">
+    <button class="es-login-btn" type="defult" size="{{primarySize}} "loading="{{loading}}" plain="{{plain}}" disabled="{{disabled}}" bindtap="login">登录</button>
+    <button class="es-register-btn" type="defult" size="{{primarySize}} "loading="{{loading}}" plain="{{plain}}" disabled="{{disabled}}">注册</button>
+</view>
+  </view>
+</form>

@@ -1,21 +1,14 @@
 <!--pages/begin/begin.wxml-->
 <view class="content">
 
-  <van-dialog id="van-dialog" />
-  <!-- 弹出框 -->
-  <van-notify id="van-notify" />
-
   <!-- 轮播图 -->
-  <view class="slide-image">
-    <swiper class="home-swiper" indicator-dots="true" autoplay="{{autoplay}}" interval="{{interval}}"
-      duration="{{duration}}">
-      <block wx:for-items="{{lunboData}}">
-        <swiper-item>
-          <image src="{{item.imgurl}}" class="slide-image" />
-        </swiper-item>
-      </block>
-    </swiper>
-  </view>
+    <swiper class="home-swiper" indicator-dots="true" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <block wx:for-items="{{lunboData}}">
+      <swiper-item>
+        <image src="{{item.imgurl}}" class="slide-image" />
+      </swiper-item>
+    </block>
+  </swiper>
 
   <!-- 分割线 -->
   <form bindreset="formReset" bindsubmit="formSubmit">
@@ -26,12 +19,12 @@
 
     <view class="container">
 
-      <view class="nowdays">
-        目前钻石：<input class="searchStyle" name="af" placeholder="000000" type="number" adjust-position="true" />
+      <view class="goal">
+        目标：<input class="searchStyle" name="af" placeholder="000000" type="number"/>
       </view>
 
       <view class="ab">
-        目标：<input class="searchStyle" name="bf" placeholder="000000" type="number" adjust-position="true" />
+        目前钻石：<input class="searchStyle" name="bf" placeholder="000000" type="number" adjust-position="true"/>
       </view>
 
       <picker name="rq" mode="date" value="{{date}}" bindchange="bindDateChange">
@@ -41,7 +34,7 @@
 
       </picker>
         <view class="cb">
-          本日挖钻：<input class="searchStyle" name="cf" placeholder="000000" type="number" adjust-position="true" />
+          本日挖钻：<input class="searchStyle" name="cf" placeholder="000000" type="number" adjust-position="true"/>
           </view>
 
       <view class="btn_container">

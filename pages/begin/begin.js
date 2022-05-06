@@ -1,7 +1,4 @@
 // pages/begin/begin.js
-// const db = wx.cloud.database()
-// var util=require("../../utils/util")
-// import Dialog from '../../miniprogram_npm/@vant/weapp/dialog/dialog'
 
 Page({
   /**
@@ -13,22 +10,24 @@ Page({
     autoplay:true,
     interval:3000,
     duration:1200,
-    paymentIndex:0,
-    index:0,
-    date:"",
-    form_info:""
+    // paymentIndex:0,
+    // index:0,
+    // date:"",
+    // goal_info:""
   },
-  onLoad: function (options) {
-    // var TIME = util.formatTime(new Date());
-    // this.setData({
-    // time: TIME,
-    // });
-    //获取当前时间
-    var DATE = util.formDate(new Date());
-    this.setData({
-    date: DATE,
-});
-  },
+//   onLoad: function (options) {
+//     //获取当前时间
+//     var DATE = util.formDate(new Date());
+//     this.setData({
+//     date: DATE,
+// });
+//   },
+//   bindDateChange: function (e) {
+//     console.log( e.detail.value)
+//     this.setData({
+//       date: e.detail.value
+//     })
+//   },
 
   /**
    * 生命周期函数--监听页面加载

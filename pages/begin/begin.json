@@ -5,6 +5,7 @@
         "van-cell-group":"@vant/weapp/cell-group",
         "van-field":"@vant/weapp/field",
         "van-dialog":"@vant/weapp/dialog",
-        "van-notify":"@vant/weapp/notify"
+        "van-notify":"@vant/weapp/notify",
+        "van-button":"@vant/weapp/button"
   }
 }

@@ -19,9 +19,9 @@
   color: #333;
   margin: 30rpx auto;
   padding: 20rpx;
-  text-align:lef
+  text-align:left
 }
-.nowdays,.ab,.cb{
+.goal,.ab,.cb{
   width: 600rpx;
   border-radius: 30rpx;
   background-color:rgba(255, 255, 255, 1);
@@ -77,4 +77,11 @@
 }
 .searchStyle {
   text-align :left;
+  margin-top: 7px;
+}
+.goal-inpute {
+  text-align: left;
+  height: 2.58823529em;
+  min-height: 2.58823529em;
+  line-height: 2.58823529em;
 }
