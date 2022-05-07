@@ -21,7 +21,7 @@
   padding: 20rpx;
   text-align:left
 }
-.goal,.ab,.cb{
+.goal,.now,.today{
   width: 600rpx;
   border-radius: 30rpx;
   background-color:rgba(255, 255, 255, 1);
