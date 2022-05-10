@@ -1,3 +1,7 @@
 {
-  "usingComponents": {}
+  "navigationBarTitleText": "目标",
+  "usingComponents": {
+    "van-divider":"@vant/weapp/divider/index",
+    "van-tab":"@vant/weapp/tab/index"
+  }
 }

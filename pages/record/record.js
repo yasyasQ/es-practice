@@ -1,10 +1,20 @@
 // pages/record/record.js
+// import { ref } from 'vue';
+
+// export default {
+//   setup() {
+//     const active = ref(0);
+//     return { active };
+//   },
+// };
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+
 
   },
 
@@ -40,6 +50,11 @@ Page({
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
+    // setTimeout(() => {
+    //   wx.navigateTo({
+    //     url: '../begin/begin',
+    // }) 
+    // })
 
   },
 

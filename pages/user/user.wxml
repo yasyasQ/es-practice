@@ -34,5 +34,6 @@
     <button class="es-login-btn" type="defult" size="{{primarySize}} "loading="{{loading}}" plain="{{plain}}" disabled="{{disabled}}" bindtap="login">登录</button>
     <button class="es-register-btn" type="defult" size="{{primarySize}} "loading="{{loading}}" plain="{{plain}}" disabled="{{disabled}}">注册</button>
 </view>
+
   </view>
 </form>
