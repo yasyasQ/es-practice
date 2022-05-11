@@ -4,9 +4,7 @@
     "van-field":"@vant/weapp/field/index",
     "van-dialog":"@vant/weapp/dialog/index",
     "van-button":"@vant/weapp/button/index",
-    "van-picker":"@vant/weapp/picker/index",
-
-    "drl-swiper":"../../components/swiper/swiper"
+    "van-picker":"@vant/weapp/picker/index"
 
   }
 }

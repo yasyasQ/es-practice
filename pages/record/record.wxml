@@ -1,17 +1,20 @@
 <!--pages/record/record.wxml-->
 <view class='head'>
 
-<view class='containere' style="height: auto">
-    <van-divider contentPosition="center">记一笔</van-divider>
-</view>
+    <view class='containere1' style="height: auto">
+        <van-divider contentPosition="center">存钻统计</van-divider>
 
-<view>
-  <van-tabs v-model:active="active">
-  <van-tab title="标签 1">内容 1</van-tab>
-  <van-tab title="标签 2">内容 2</van-tab>
-  <van-tab title="标签 3">内容 3</van-tab>
-  <van-tab title="标签 4">内容 4</van-tab>
-</van-tabs>
-</view>
-</view>
+    </view>
 
+    <view class="main">
+        <van-cell-grop inset="true">
+            <van-cell title="当前统计图展示" label="离目标还差："/>
+            <van-cell title="统计图" />
+        </van-cell-grop>
+    </view>
+
+    <view class='containere2' style="height: auto">
+        <van-divider contentPosition="center">祝咪早日实现目标</van-divider>
+
+    </view>
+</view>

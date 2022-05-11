@@ -38,7 +38,8 @@
   },
   "sitemapLocation": "sitemap.json",
   "usingComponents": {
-    "van-button":"@vant/weapp/button/index"
+    "van-button":"/miniprogram_npm/@vant/weapp/button/index",
+    "van-cell-group":"/miniprogram_npm/@vant/weapp/cell-group/index"
   },
   "lazyCodeLoading": "requiredComponents"
 }
