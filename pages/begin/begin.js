@@ -1,5 +1,5 @@
 // pages/begin/begin.js
-// let app = getApp()
+let app = getApp()
 
 Page({
   /**
@@ -7,19 +7,16 @@ Page({
    */
   data: {
     // 轮播图配置 
-    // paymentIndex:0,
-    // index:0,
-    // date:"",
-    // goal_info:""    
-    lunboData:[],
+    // lunboData:[],
+    // autoplay:true,
+    // interval:3000,
+    // duration:1200, 
 
     // 日期选择器
     date:'',
-
-    usergoal:"",
-    usernow:"",
-    usertoday:"",
-
+    usergoal:0,
+    usernow:0,
+    usertoday:0,
   },
 
   /**
@@ -27,38 +24,30 @@ Page({
    */
   // 轮播图
   onLoad: function () {
-    var that = this;
-    var data = {
-      "datas":[
-        {
-          "id" : 1,
-          "imgurl":"../icon/one.jpg"
-        },
-        {
-          "id" : 2 ,
-          "imgurl":"../icon/two.jpg"
-        },
-        {
-        "id" : 3,
-        "imgurl":"../icon/three.jpg"          
-        }
-      ]
-    };
-  that.setData({
-    lunboData: data.datas
-  })
+    // var DATE = that.formDate(new Date());
+    // this.setData({
+    // date: DATE,
+  // });
   },
-  // 时间选择器
-  changeDate(e){
+  bindDateChange: function (e) {
+    console.log('picker发送选择改变，携带值为', e.detail.value)
     this.setData({
       date: e.detail.value
     })
   },
+  // 时间选择器
+  // changeDate(e){
+  //   this.setData({
+  //     date: e.detail.value
+  //   })
+  // },
+
+
   //记录输入的数据
   getUsergoal:function(usergoal){ 
-    console.log(usergoal.detail.value)
+   console.log(usergoal.detail.value)
     this.setData({ 
-      usergoal: usergoal.detail.value
+      usergoal:usergoal.detail.value
     })
   },
 
@@ -73,7 +62,7 @@ Page({
       console.log(usertoday.detail.value)
     this.setData({ 
       usertoday: usertoday.detail.value
-    }) 
+    })
   }
 
 })

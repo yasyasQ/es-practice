@@ -3,7 +3,7 @@
   "packOptions": {
     "ignore": []
   },
-  "setting": { 
+  "setting": {
     "urlCheck": true,
     "es6": true,
     "enhance": true,
@@ -25,7 +25,6 @@
     "useMultiFrameRuntime": true,
     "useApiHook": true,
     "useApiHostProcess": true,
-    "showShowdowRootInWxmIpaneI":true,
     "babelSetting": {
       "ignore": [],
       "disablePlugins": [],

@@ -1,10 +1,14 @@
 {
   "usingComponents": {
+    "my-swiper":"../../components/swiper/swiper",
     "van-cell-group":"@vant/weapp/cell-group/index",
     "van-field":"@vant/weapp/field/index",
     "van-dialog":"@vant/weapp/dialog/index",
     "van-button":"@vant/weapp/button/index",
-    "van-picker":"@vant/weapp/picker/index"
+    "van-picker":"@vant/weapp/picker/index",
+    "van-notify":"@vant/weapp/notify",
+    "van-dropdown-menu": "@vant/weapp/dropdown-menu",
+    "van-dropdown-item": "@vant/weapp/dropdown-item"
 
   }
 }

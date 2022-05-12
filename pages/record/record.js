@@ -7,7 +7,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    //导航传递过来的参数对象
+    query:{}
 
   },
 
@@ -15,7 +16,10 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+ console.log(options)
+ this.setData({
+   query:options
+ })
   },
 
   /**
