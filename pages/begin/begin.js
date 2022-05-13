@@ -14,6 +14,7 @@ Page({
 
     // 日期选择器
     date:'',
+    datenow:'',
     usergoal:0,
     usernow:0,
     usertoday:0,
@@ -32,7 +33,7 @@ Page({
   bindDateChange: function (e) {
     console.log('picker发送选择改变，携带值为', e.detail.value)
     this.setData({
-      date: e.detail.value
+      datenow: e.detail.value
     })
   },
   // 时间选择器
@@ -63,6 +64,19 @@ Page({
     this.setData({ 
       usertoday: usertoday.detail.value
     })
+  },
+
+  submitBtnClick:function() {
+    console.log("目标：" +this.data.usergoal+"目前钻石数：" +this.data.usernow+ "日期:" +this.data.datenow+"本日挖砖:" +this.data.usertoday);
+  },
+
+  buttonListener:function(){
+    var that = this
+    wx.navigateTo({
+      url: 'pages/record/record?usergoalData=' + that.data.usergoal + '&usernowData=' + that.data.usernow + '&datenowData=' + that.data.datenow + '&usertodayData=' + that.data.usertoday
+    })
+
   }
+
 
 })

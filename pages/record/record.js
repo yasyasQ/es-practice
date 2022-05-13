@@ -8,7 +8,11 @@ Page({
    */
   data: {
     //导航传递过来的参数对象
-    query:{}
+    datenow:'',
+    usergoal:0,
+    usernow:0,
+    usertoday:0,
+    gap:0,
 
   },
 
@@ -16,10 +20,14 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
- console.log(options)
- this.setData({
-   query:options
- })
+    console.log(options)
+    // var that = this
+    // that.setData({
+    //   usergoal:usergoalData,
+    //   usernow:usernowData,
+    //   datenow:datenowData,
+    //   usertoday:usertodayData,
+    // })
   },
 
   /**

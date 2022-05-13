@@ -7,8 +7,9 @@
     </view>
 
     <view class="main">
-        <van-cell-grop inset="true">
+        <van-cell-grop inset="true" class="aa">
             <van-cell title="当前统计图展示" label="离目标还差："/>
+            <van-cell title="大概还需要:" value="--月"/>
             <van-cell title="统计图" />
         </van-cell-grop>
     </view>

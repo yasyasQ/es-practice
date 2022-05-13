@@ -1,4 +1,14 @@
 /* pages/record/record.wxss */
 .main {
-  height:250px;
+  width:700rpx;
+  /* border-radius: 30rpx; */
+  background-color:#A660A7;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  font-size: 35rpx;
+  color: #333;
+  margin: 30rpx auto;
+  padding: 20rpx;
+  text-align:left
 }
